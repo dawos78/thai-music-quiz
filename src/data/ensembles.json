@@ -1,0 +1,356 @@
+{
+  "categories": [
+    {
+      "id": "piphat",
+      "name": "วงปี่พาทย์",
+      "description": "วงดนตรีที่ประกอบด้วยเครื่องตี เครื่องเป่า เป็นหลัก ให้เสียงดังเร้าใจ",
+      "color": "#C9A747"
+    },
+    {
+      "id": "khrueang-sai",
+      "name": "วงเครื่องสาย",
+      "description": "วงดนตรีที่มีเครื่องสายเป็นหลัก ให้เสียงนุ่มนวล ไพเราะ",
+      "color": "#47C9A7"
+    },
+    {
+      "id": "mahori",
+      "name": "วงมโหรี",
+      "description": "วงดนตรีที่ผสมผสานเครื่องดนตรีครบทั้ง 4 ประเภท ดีด สี ตี เป่า",
+      "color": "#A747C9"
+    }
+  ],
+  "ensembles": [
+    {
+      "id": "piphat-5-sukhothai",
+      "categoryId": "piphat",
+      "name": "วงปี่พาทย์เครื่องห้าสมัยสุโขทัย",
+      "era": "สมัยสุโขทัย",
+      "description": "วงปี่พาทย์ยุคแรกเริ่ม ยังไม่มีระนาดเอก ใช้กลองทัดเพียงลูกเดียว",
+      "instruments": [
+        { "name": "ปี่ใน", "type": "เป่า", "quantity": 1 },
+        { "name": "ฆ้องวงใหญ่", "type": "ตี", "quantity": 1 },
+        { "name": "ตะโพน", "type": "ตี", "quantity": 1 },
+        { "name": "กลองทัด", "type": "ตี", "quantity": 1 },
+        { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 }
+      ]
+    },
+    {
+      "id": "piphat-5-ayutthaya",
+      "categoryId": "piphat",
+      "name": "วงปี่พาทย์เครื่องห้าสมัยอยุธยา",
+      "era": "สมัยอยุธยา",
+      "description": "พัฒนาจากสมัยสุโขทัยโดยเพิ่มระนาดเอกเข้ามาร่วมบรรเลง",
+      "instruments": [
+        { "name": "ปี่ใน", "type": "เป่า", "quantity": 1 },
+        { "name": "ระนาดเอก", "type": "ตี", "quantity": 1 },
+        { "name": "ฆ้องวงใหญ่", "type": "ตี", "quantity": 1 },
+        { "name": "ตะโพน", "type": "ตี", "quantity": 1 },
+        { "name": "กลองทัด", "type": "ตี", "quantity": 1 },
+        { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 }
+      ]
+    },
+    {
+      "id": "piphat-5-rattanakosin",
+      "categoryId": "piphat",
+      "name": "วงปี่พาทย์เครื่องห้าสมัยรัตนโกสินทร์",
+      "era": "สมัยรัตนโกสินทร์",
+      "description": "รูปแบบมาตรฐานที่ใช้มาจนปัจจุบัน เพิ่มกลองทัดเป็น 2 ลูก",
+      "instruments": [
+        { "name": "ปี่ใน", "type": "เป่า", "quantity": 1 },
+        { "name": "ระนาดเอก", "type": "ตี", "quantity": 1 },
+        { "name": "ฆ้องวงใหญ่", "type": "ตี", "quantity": 1 },
+        { "name": "ตะโพน", "type": "ตี", "quantity": 1 },
+        { "name": "กลองทัด", "type": "ตี", "quantity": 2 },
+        { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 }
+      ]
+    },
+    {
+      "id": "piphat-khu",
+      "categoryId": "piphat",
+      "name": "วงปี่พาทย์เครื่องคู่",
+      "era": "สมัยรัตนโกสินทร์ (ร.3)",
+      "description": "พัฒนาจากเครื่องห้า โดยเพิ่มเครื่องดนตรีเป็นคู่ ทำให้เสียงหนาแน่นขึ้น",
+      "instruments": [
+        { "name": "ปี่ใน", "type": "เป่า", "quantity": 1 },
+        { "name": "ปี่นอก", "type": "เป่า", "quantity": 1 },
+        { "name": "ระนาดเอก", "type": "ตี", "quantity": 1 },
+        { "name": "ระนาดทุ้ม", "type": "ตี", "quantity": 1 },
+        { "name": "ฆ้องวงใหญ่", "type": "ตี", "quantity": 1 },
+        { "name": "ฆ้องวงเล็ก", "type": "ตี", "quantity": 1 },
+        { "name": "ตะโพน", "type": "ตี", "quantity": 1 },
+        { "name": "กลองทัด", "type": "ตี", "quantity": 2 },
+        { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 },
+        { "name": "ฉาบเล็ก", "type": "ตี", "quantity": 1 },
+        { "name": "ฉาบใหญ่", "type": "ตี", "quantity": 1 },
+        { "name": "โหม่ง", "type": "ตี", "quantity": 1 }
+      ]
+    },
+    {
+      "id": "piphat-yai",
+      "categoryId": "piphat",
+      "name": "วงปี่พาทย์เครื่องใหญ่",
+      "era": "สมัยรัตนโกสินทร์ (ร.4)",
+      "description": "วงปี่พาทย์ขนาดใหญ่ที่สุด เพิ่มระนาดเอกเหล็กและระนาดทุ้มเหล็ก",
+      "instruments": [
+        { "name": "ปี่ใน", "type": "เป่า", "quantity": 1 },
+        { "name": "ปี่นอก", "type": "เป่า", "quantity": 1 },
+        { "name": "ระนาดเอก", "type": "ตี", "quantity": 1 },
+        { "name": "ระนาดทุ้ม", "type": "ตี", "quantity": 1 },
+        { "name": "ระนาดเอกเหล็ก", "type": "ตี", "quantity": 1 },
+        { "name": "ระนาดทุ้มเหล็ก", "type": "ตี", "quantity": 1 },
+        { "name": "ฆ้องวงใหญ่", "type": "ตี", "quantity": 1 },
+        { "name": "ฆ้องวงเล็ก", "type": "ตี", "quantity": 1 },
+        { "name": "ตะโพน", "type": "ตี", "quantity": 1 },
+        { "name": "กลองทัด", "type": "ตี", "quantity": 2 },
+        { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 },
+        { "name": "ฉาบเล็ก", "type": "ตี", "quantity": 1 },
+        { "name": "ฉาบใหญ่", "type": "ตี", "quantity": 1 },
+        { "name": "โหม่ง", "type": "ตี", "quantity": 1 }
+      ]
+    },
+    {
+      "id": "piphat-nanghong",
+      "categoryId": "piphat",
+      "name": "วงปี่พาทย์นางหงส์",
+      "era": "ใช้ในงานศพ",
+      "description": "ใช้ปี่ชวาแทนปี่ใน และกลองมลายูแทนตะโพน นิยมใช้ในงานศพ",
+      "instruments": [
+        { "name": "ปี่ชวา", "type": "เป่า", "quantity": 1 },
+        { "name": "ระนาดเอก", "type": "ตี", "quantity": 1 },
+        { "name": "ระนาดทุ้ม", "type": "ตี", "quantity": 1 },
+        { "name": "ฆ้องวงใหญ่", "type": "ตี", "quantity": 1 },
+        { "name": "ฆ้องวงเล็ก", "type": "ตี", "quantity": 1 },
+        { "name": "กลองมลายู", "type": "ตี", "quantity": 1 },
+        { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 },
+        { "name": "ฉาบ", "type": "ตี", "quantity": 1 }
+      ]
+    },
+    {
+      "id": "piphat-mon",
+      "categoryId": "piphat",
+      "name": "วงปี่พาทย์มอญ",
+      "era": "ได้รับอิทธิพลจากมอญ",
+      "description": "เสียงโหยหวน ได้รับอิทธิพลจากมอญ นิยมใช้ในงานศพและพิธีกรรม",
+      "instruments": [
+        { "name": "ปี่มอญ", "type": "เป่า", "quantity": 1 },
+        { "name": "ฆ้องมอญวงใหญ่", "type": "ตี", "quantity": 1 },
+        { "name": "ระนาดเอก", "type": "ตี", "quantity": 1 },
+        { "name": "ระนาดทุ้ม", "type": "ตี", "quantity": 1 },
+        { "name": "ตะโพนมอญ", "type": "ตี", "quantity": 1 },
+        { "name": "เปิงมางคอก", "type": "ตี", "quantity": 1 },
+        { "name": "โหม่ง", "type": "ตี", "quantity": 1 },
+        { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 },
+        { "name": "ฉาบเล็ก", "type": "ตี", "quantity": 1 },
+        { "name": "ฉาบใหญ่", "type": "ตี", "quantity": 1 }
+      ]
+    },
+    {
+      "id": "piphat-chatri",
+      "categoryId": "piphat",
+      "name": "วงปี่พาทย์ชาตรี",
+      "era": "ใช้ประกอบโนรา/หนังตะลุง",
+      "description": "วงปี่พาทย์ขนาดเล็กที่สุด ใช้ประกอบการแสดงโนราห์และหนังตะลุง",
+      "instruments": [
+        { "name": "ปี่นอก", "type": "เป่า", "quantity": 1 },
+        { "name": "ฆ้องคู่", "type": "ตี", "quantity": 1 },
+        { "name": "โทน", "type": "ตี", "quantity": 1 },
+        { "name": "กลองชาตรี", "type": "ตี", "quantity": 2 },
+        { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 },
+        { "name": "กรับ", "type": "ตี", "quantity": 1 }
+      ]
+    },
+    {
+      "id": "piphat-dukdamban",
+      "categoryId": "piphat",
+      "name": "วงปี่พาทย์ดึกดำบรรพ์",
+      "era": "สมัยรัตนโกสินทร์ (ร.5)",
+      "description": "เน้นเสียงทุ้มนุ่มนวล ตัดเครื่องดนตรีเสียงแหลมออก ใช้ประกอบละครดึกดำบรรพ์",
+      "instruments": [
+        { "name": "ขลุ่ยเพียงออ", "type": "เป่า", "quantity": 1 },
+        { "name": "ขลุ่ยอู้", "type": "เป่า", "quantity": 1 },
+        { "name": "ระนาดเอก (ไม้นวม)", "type": "ตี", "quantity": 1 },
+        { "name": "ระนาดทุ้ม", "type": "ตี", "quantity": 1 },
+        { "name": "ระนาดทุ้มเหล็ก", "type": "ตี", "quantity": 1 },
+        { "name": "ฆ้องวงใหญ่", "type": "ตี", "quantity": 1 },
+        { "name": "ฆ้องหุ่ย", "type": "ตี", "quantity": 7 },
+        { "name": "ตะโพน", "type": "ตี", "quantity": 1 },
+        { "name": "กลองตะโพน", "type": "ตี", "quantity": 1 },
+        { "name": "ซออู้", "type": "สี", "quantity": 1 },
+        { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 }
+      ]
+    },
+    {
+      "id": "piphat-sepha",
+      "categoryId": "piphat",
+      "name": "วงปี่พาทย์เสภา",
+      "era": "ใช้ประกอบการขับเสภา",
+      "description": "ใช้กลองสองหน้าแทนตะโพนและกลองทัด เหมาะกับการขับเสภา",
+      "instruments": [
+        { "name": "ปี่ใน", "type": "เป่า", "quantity": 1 },
+        { "name": "ระนาดเอก", "type": "ตี", "quantity": 1 },
+        { "name": "ระนาดทุ้ม", "type": "ตี", "quantity": 1 },
+        { "name": "ฆ้องวงใหญ่", "type": "ตี", "quantity": 1 },
+        { "name": "ฆ้องวงเล็ก", "type": "ตี", "quantity": 1 },
+        { "name": "กลองสองหน้า", "type": "ตี", "quantity": 1 },
+        { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 }
+      ]
+    },
+    {
+      "id": "khrueang-sai-diao",
+      "categoryId": "khrueang-sai",
+      "name": "วงเครื่องสายเครื่องเดี่ยว",
+      "era": "",
+      "description": "วงเครื่องสายขนาดเล็ก มีเครื่องดนตรีหลักอย่างละชิ้น",
+      "instruments": [
+        { "name": "ซอด้วง", "type": "สี", "quantity": 1 },
+        { "name": "ซออู้", "type": "สี", "quantity": 1 },
+        { "name": "จะเข้", "type": "ดีด", "quantity": 1 },
+        { "name": "ขลุ่ยเพียงออ", "type": "เป่า", "quantity": 1 },
+        { "name": "โทน-รำมะนา", "type": "ตี", "quantity": 1 },
+        { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 }
+      ]
+    },
+    {
+      "id": "khrueang-sai-khu",
+      "categoryId": "khrueang-sai",
+      "name": "วงเครื่องสายเครื่องคู่",
+      "era": "",
+      "description": "เพิ่มเครื่องดนตรีประเภททำนองเป็นคู่ ให้เสียงหนาแน่นขึ้น",
+      "instruments": [
+        { "name": "ซอด้วง", "type": "สี", "quantity": 2 },
+        { "name": "ซออู้", "type": "สี", "quantity": 2 },
+        { "name": "จะเข้", "type": "ดีด", "quantity": 2 },
+        { "name": "ขลุ่ยเพียงออ", "type": "เป่า", "quantity": 1 },
+        { "name": "ขลุ่ยหลิบ", "type": "เป่า", "quantity": 1 },
+        { "name": "โทน-รำมะนา", "type": "ตี", "quantity": 1 },
+        { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 },
+        { "name": "ฉาบเล็ก", "type": "ตี", "quantity": 1 },
+        { "name": "โหม่ง", "type": "ตี", "quantity": 1 }
+      ]
+    },
+    {
+      "id": "khrueang-sai-pi-chawa",
+      "categoryId": "khrueang-sai",
+      "name": "วงเครื่องสายปี่ชวา",
+      "era": "",
+      "description": "ใช้ปี่ชวาแทนขลุ่ย และกลองแขกแทนโทน-รำมะนา นิยมในงานอวมงคล",
+      "instruments": [
+        { "name": "ปี่ชวา", "type": "เป่า", "quantity": 1 },
+        { "name": "ซอด้วง", "type": "สี", "quantity": 1 },
+        { "name": "ซออู้", "type": "สี", "quantity": 1 },
+        { "name": "จะเข้", "type": "ดีด", "quantity": 1 },
+        { "name": "ขลุ่ยหลิบ", "type": "เป่า", "quantity": 1 },
+        { "name": "กลองแขก", "type": "ตี", "quantity": 1 },
+        { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 }
+      ]
+    },
+    {
+      "id": "khrueang-sai-phasom",
+      "categoryId": "khrueang-sai",
+      "name": "วงเครื่องสายผสม",
+      "era": "",
+      "description": "วงเครื่องสายที่นำเครื่องดนตรีอื่นมาผสม เช่น ขิม ไวโอลิน",
+      "instruments": [
+        { "name": "ซอด้วง", "type": "สี", "quantity": 1 },
+        { "name": "ซออู้", "type": "สี", "quantity": 1 },
+        { "name": "จะเข้", "type": "ดีด", "quantity": 1 },
+        { "name": "ขลุ่ยเพียงออ", "type": "เป่า", "quantity": 1 },
+        { "name": "โทน-รำมะนา", "type": "ตี", "quantity": 1 },
+        { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 },
+        { "name": "ขิม", "type": "ตี", "quantity": 1 }
+      ]
+    },
+    {
+      "id": "mahori-4",
+      "categoryId": "mahori",
+      "name": "วงมโหรีเครื่องสี่",
+      "era": "สมัยอยุธยา",
+      "description": "วงมโหรีรุ่นแรก มีผู้บรรเลง 4 คน",
+      "instruments": [
+        { "name": "ซอสามสาย", "type": "สี", "quantity": 1 },
+        { "name": "กระจับปี่", "type": "ดีด", "quantity": 1 },
+        { "name": "โทน (ทับ)", "type": "ตี", "quantity": 1 },
+        { "name": "กรับพวง", "type": "ตี", "quantity": 1 }
+      ]
+    },
+    {
+      "id": "mahori-6",
+      "categoryId": "mahori",
+      "name": "วงมโหรีเครื่องหก",
+      "era": "สมัยอยุธยา",
+      "description": "พัฒนาจากเครื่องสี่ เพิ่มรำมะนาและขลุ่ยเพียงออ",
+      "instruments": [
+        { "name": "ซอสามสาย", "type": "สี", "quantity": 1 },
+        { "name": "กระจับปี่", "type": "ดีด", "quantity": 1 },
+        { "name": "โทน", "type": "ตี", "quantity": 1 },
+        { "name": "รำมะนา", "type": "ตี", "quantity": 1 },
+        { "name": "ขลุ่ยเพียงออ", "type": "เป่า", "quantity": 1 },
+        { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 }
+      ]
+    },
+    {
+      "id": "mahori-diao",
+      "categoryId": "mahori",
+      "name": "วงมโหรีเครื่องเดี่ยว",
+      "era": "",
+      "description": "วงมโหรีมาตรฐานขนาดเล็ก ผสมเครื่องดนตรีจากวงปี่พาทย์และวงเครื่องสาย",
+      "instruments": [
+        { "name": "ซอสามสาย", "type": "สี", "quantity": 1 },
+        { "name": "ซอด้วง", "type": "สี", "quantity": 1 },
+        { "name": "ซออู้", "type": "สี", "quantity": 1 },
+        { "name": "จะเข้", "type": "ดีด", "quantity": 1 },
+        { "name": "ขลุ่ยเพียงออ", "type": "เป่า", "quantity": 1 },
+        { "name": "ระนาดเอก (มโหรี)", "type": "ตี", "quantity": 1 },
+        { "name": "ฆ้องวงใหญ่ (มโหรี)", "type": "ตี", "quantity": 1 },
+        { "name": "โทน-รำมะนา", "type": "ตี", "quantity": 1 },
+        { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 }
+      ]
+    },
+    {
+      "id": "mahori-khu",
+      "categoryId": "mahori",
+      "name": "วงมโหรีเครื่องคู่",
+      "era": "",
+      "description": "เพิ่มเครื่องดนตรีให้มากขึ้นจากเครื่องเดี่ยว มีทั้งเครื่องสายและเครื่องตี",
+      "instruments": [
+        { "name": "ซอสามสาย", "type": "สี", "quantity": 1 },
+        { "name": "ซอสามสายหลิบ", "type": "สี", "quantity": 1 },
+        { "name": "ซอด้วง", "type": "สี", "quantity": 2 },
+        { "name": "ซออู้", "type": "สี", "quantity": 2 },
+        { "name": "จะเข้", "type": "ดีด", "quantity": 2 },
+        { "name": "ขลุ่ยเพียงออ", "type": "เป่า", "quantity": 1 },
+        { "name": "ขลุ่ยหลิบ", "type": "เป่า", "quantity": 1 },
+        { "name": "ระนาดเอก (มโหรี)", "type": "ตี", "quantity": 1 },
+        { "name": "ระนาดทุ้ม (มโหรี)", "type": "ตี", "quantity": 1 },
+        { "name": "ฆ้องวงใหญ่ (มโหรี)", "type": "ตี", "quantity": 1 },
+        { "name": "ฆ้องวงเล็ก (มโหรี)", "type": "ตี", "quantity": 1 },
+        { "name": "โทน-รำมะนา", "type": "ตี", "quantity": 1 },
+        { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 }
+      ]
+    },
+    {
+      "id": "mahori-yai",
+      "categoryId": "mahori",
+      "name": "วงมโหรีเครื่องใหญ่",
+      "era": "",
+      "description": "วงมโหรีที่มีเครื่องดนตรีครบถ้วนที่สุด รวมระนาดเหล็กจากวงปี่พาทย์เครื่องใหญ่",
+      "instruments": [
+        { "name": "ซอสามสาย", "type": "สี", "quantity": 1 },
+        { "name": "ซอสามสายหลิบ", "type": "สี", "quantity": 1 },
+        { "name": "ซอด้วง", "type": "สี", "quantity": 2 },
+        { "name": "ซออู้", "type": "สี", "quantity": 2 },
+        { "name": "จะเข้", "type": "ดีด", "quantity": 2 },
+        { "name": "ขลุ่ยเพียงออ", "type": "เป่า", "quantity": 1 },
+        { "name": "ขลุ่ยหลิบ", "type": "เป่า", "quantity": 1 },
+        { "name": "ระนาดเอก (มโหรี)", "type": "ตี", "quantity": 1 },
+        { "name": "ระนาดทุ้ม (มโหรี)", "type": "ตี", "quantity": 1 },
+        { "name": "ระนาดเอกเหล็ก (มโหรี)", "type": "ตี", "quantity": 1 },
+        { "name": "ระนาดทุ้มเหล็ก (มโหรี)", "type": "ตี", "quantity": 1 },
+        { "name": "ฆ้องวงใหญ่ (มโหรี)", "type": "ตี", "quantity": 1 },
+        { "name": "ฆ้องวงเล็ก (มโหรี)", "type": "ตี", "quantity": 1 },
+        { "name": "โทน-รำมะนา", "type": "ตี", "quantity": 1 },
+        { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 }
+      ]
+    }
+  ]
+}
