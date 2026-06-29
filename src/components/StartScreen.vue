@@ -66,6 +66,9 @@
       <p class="text-[#48484a] text-xs">
         ครอบคลุม 3 ประเภทหลัก · 19 วงดนตรี · 30+ เครื่องดนตรี
       </p>
+      <p class="text-[#48484a] text-xs mt-2">
+        Made by <span class="text-[#98989d]">Wanwisa Leonyos</span>
+      </p>
     </div>
   </div>
 </template>
