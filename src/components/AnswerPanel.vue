@@ -1,5 +1,5 @@
 <template>
-  <div class="space-y-3">
+  <div class="space-y-2.5">
     <button
       v-for="(choice, index) in choices"
       :key="index"
@@ -12,20 +12,19 @@
       }"
     >
       <div class="flex items-center gap-3">
-        <span class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-sm font-bold text-amber-300/60 group-hover:text-amber-300 transition-colors flex-shrink-0">
+        <span class="w-7 h-7 rounded-lg bg-[#f5f5f7] flex items-center justify-center text-xs font-semibold text-[#86868b] group-hover:text-[#1d1d1f] transition-colors flex-shrink-0">
           {{ ['ก', 'ข', 'ค', 'ง'][index] }}
         </span>
-        <span class="flex-1">{{ choice }}</span>
-        <span v-if="selected === choice && !result" class="text-amber-400 text-sm">●</span>
+        <span class="flex-1 text-[#1d1d1f]">{{ choice }}</span>
+        <span v-if="selected === choice && !result" class="text-[#5856d6] text-sm">●</span>
       </div>
     </button>
 
-    <!-- Submit button -->
     <div class="pt-2" v-if="!result">
       <button
         @click="$emit('submit')"
         :disabled="!selected"
-        class="btn-gold w-full disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:shadow-none"
+        class="btn-gold w-full disabled:opacity-30 disabled:cursor-not-allowed"
       >
         ยืนยันคำตอบ
       </button>

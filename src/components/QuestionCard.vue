@@ -2,38 +2,32 @@
   <div class="glass-card-gold p-5 md:p-6">
     <!-- Header -->
     <div class="flex items-center justify-between mb-4">
-      <h2 class="text-amber-300 font-bold text-sm uppercase tracking-widest">
-        {{ isComplete ? '✅ เครื่องดนตรีครบวง' : '🎵 เครื่องดนตรีในวง' }}
+      <h2 class="text-[#1d1d1f] font-semibold text-sm flex items-center gap-2">
+        <Icon :icon="isComplete ? 'mdi:check-circle' : 'mdi:music-note'" class="w-4 h-4" :class="isComplete ? 'text-green-500' : 'text-[#86868b]'" />
+        {{ isComplete ? 'เครื่องดนตรีครบวง' : 'เครื่องดนตรีในวง' }}
       </h2>
-      <span class="text-amber-200/40 text-xs">
+      <span class="text-[#86868b] text-xs">
         {{ currentCount }} / {{ totalInstruments }} ชิ้น
       </span>
     </div>
 
-    <!-- Description hint -->
-    <p v-if="description" class="text-amber-200/50 text-xs mb-4 italic">
-      💡 {{ description }}
+    <!-- Description -->
+    <p v-if="description" class="text-[#86868b] text-xs mb-4">
+      {{ description }}
     </p>
 
     <!-- Instruments grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
       <!-- Visible instruments -->
       <div
         v-for="(inst, index) in visibleInstruments"
         :key="'visible-' + index"
         class="instrument-slot visible animate-fade-in"
-        :style="{ animationDelay: (index * 0.05) + 's' }"
+        :style="{ animationDelay: (index * 0.03) + 's' }"
       >
-        <!-- Image container: always show emoji behind, image on top -->
-        <div
-          class="w-12 h-12 rounded-xl flex-shrink-0 overflow-hidden border relative"
-          :style="{
-            backgroundColor: getTypeColor(inst.type) + '15',
-            borderColor: getTypeColor(inst.type) + '30',
-          }"
-        >
-          <div class="absolute inset-0 flex items-center justify-center text-2xl z-0">
-            {{ getEmoji(inst.type) }}
+        <div class="w-10 h-10 rounded-lg flex-shrink-0 overflow-hidden bg-[#f5f5f7] relative">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <Icon :icon="getTypeIcon(inst.type)" class="w-5 h-5 text-[#86868b]" />
           </div>
           <img
             v-if="getImage(inst.name)"
@@ -44,36 +38,30 @@
           />
         </div>
         <div class="flex-1 min-w-0">
-          <p class="text-amber-100 font-medium text-sm truncate">{{ inst.name }}</p>
-          <p class="text-amber-200/40 text-xs">
-            <span :style="{ color: getTypeColor(inst.type) }">{{ getLabel(inst.type) }}</span>
+          <p class="text-[#1d1d1f] font-medium text-sm truncate">{{ inst.name }}</p>
+          <p class="text-[#86868b] text-xs">
+            {{ getLabel(inst.type) }}
             {{ inst.quantity > 1 ? ' × ' + inst.quantity : '' }}
           </p>
         </div>
       </div>
 
-      <!-- Hidden instrument slot -->
-      <div
-        v-if="hiddenInstrument && !showHidden"
-        class="instrument-slot hidden-instrument"
-      >
-        <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex-shrink-0 flex items-center justify-center border border-amber-500/30 border-dashed">
-          <span class="text-amber-400 text-xl font-bold">?</span>
+      <!-- Hidden slot -->
+      <div v-if="hiddenInstrument && !showHidden" class="instrument-slot hidden-instrument">
+        <div class="w-10 h-10 rounded-lg bg-amber-50 flex-shrink-0 flex items-center justify-center">
+          <Icon icon="mdi:help" class="w-5 h-5 text-amber-500" />
         </div>
         <div class="flex-1">
-          <p class="text-amber-400 font-bold text-sm">เครื่องดนตรีที่หายไป</p>
-          <p class="text-amber-200/40 text-xs">ทายให้ถูก!</p>
+          <p class="text-amber-700 font-medium text-sm">เครื่องดนตรีที่หายไป</p>
+          <p class="text-amber-500 text-xs">ทายให้ถูก!</p>
         </div>
       </div>
 
-      <!-- Revealed instrument -->
-      <div
-        v-if="hiddenInstrument && showHidden"
-        class="instrument-slot revealed"
-      >
-        <div class="w-12 h-12 rounded-xl flex-shrink-0 overflow-hidden border border-emerald-500/30 bg-emerald-500/10 relative">
-          <div class="absolute inset-0 flex items-center justify-center text-2xl z-0">
-            {{ getEmoji(hiddenInstrument.type) }}
+      <!-- Revealed -->
+      <div v-if="hiddenInstrument && showHidden" class="instrument-slot revealed">
+        <div class="w-10 h-10 rounded-lg flex-shrink-0 overflow-hidden bg-green-50 relative">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <Icon :icon="getTypeIcon(hiddenInstrument.type)" class="w-5 h-5 text-green-500" />
           </div>
           <img
             v-if="getImage(hiddenInstrument.name)"
@@ -84,13 +72,13 @@
           />
         </div>
         <div class="flex-1">
-          <p class="text-emerald-300 font-bold text-sm">{{ hiddenInstrument.name }}</p>
-          <p class="text-emerald-200/50 text-xs">
+          <p class="text-green-700 font-medium text-sm">{{ hiddenInstrument.name }}</p>
+          <p class="text-green-500 text-xs">
             {{ getLabel(hiddenInstrument.type) }}
             {{ hiddenInstrument.quantity > 1 ? ' × ' + hiddenInstrument.quantity : '' }}
           </p>
         </div>
-        <span class="text-emerald-400 text-lg">✓</span>
+        <Icon icon="mdi:check-circle" class="w-5 h-5 text-green-500 flex-shrink-0" />
       </div>
     </div>
   </div>
@@ -98,7 +86,8 @@
 
 <script setup>
 import { computed } from 'vue'
-import { getInstrumentImage, getTypeLabel, getTypeColor as getTypeColorUtil, getTypeEmoji } from '../utils/instrumentImages'
+import { Icon } from '@iconify/vue'
+import { getInstrumentImage, getTypeLabel } from '../utils/instrumentImages'
 
 const props = defineProps({
   visibleInstruments: { type: Array, required: true },
@@ -116,19 +105,14 @@ const currentCount = computed(() => {
   return count
 })
 
-function getImage(name) {
-  return getInstrumentImage(name)
+const typeIconMap = {
+  'เป่า': 'game-icons:pan-flute',
+  'ตี': 'game-icons:drum',
+  'สี': 'game-icons:violin',
+  'ดีด': 'game-icons:harp',
 }
 
-function getEmoji(type) {
-  return getTypeEmoji(type)
-}
-
-function getLabel(type) {
-  return getTypeLabel(type)
-}
-
-function getTypeColor(type) {
-  return getTypeColorUtil(type)
-}
+function getImage(name) { return getInstrumentImage(name) }
+function getLabel(type) { return getTypeLabel(type) }
+function getTypeIcon(type) { return typeIconMap[type] || 'mdi:music-note' }
 </script>

@@ -1,77 +1,83 @@
 <template>
   <div class="animate-slide-up">
-    <!-- Trophy / Header -->
+    <!-- Header -->
     <div class="text-center mb-8">
-      <div class="text-7xl mb-4">{{ trophy }}</div>
-      <h1 class="text-3xl font-black text-gradient-gold mb-2">สรุปคะแนน</h1>
-      <p class="text-amber-200/50 text-sm">ตอบครบ {{ totalQuestionCount }} ข้อแล้ว!</p>
+      <div class="flex justify-center mb-4">
+        <div class="w-16 h-16 rounded-full flex items-center justify-center" :class="trophyBg">
+          <Icon :icon="trophyIcon" class="w-8 h-8" :class="trophyColor" />
+        </div>
+      </div>
+      <h1 class="text-2xl font-extrabold text-[#1d1d1f] mb-1">สรุปคะแนน</h1>
+      <p class="text-[#86868b] text-sm">ตอบครบ {{ totalQuestionCount }} ข้อแล้ว!</p>
     </div>
 
     <!-- Score card -->
-    <div class="glass-card-gold p-6 mb-6 text-center">
-      <div class="text-5xl font-black text-gradient-gold mb-2">{{ totalScore }}</div>
-      <p class="text-amber-200/60 text-sm mb-4">คะแนนรวม (จากทั้งหมด {{ maxPossibleScore }})</p>
+    <div class="glass-card-gold p-6 mb-5 text-center">
+      <div class="text-4xl font-extrabold text-[#1d1d1f] mb-1">{{ totalScore }}</div>
+      <p class="text-[#86868b] text-sm mb-4">คะแนนรวม (จากทั้งหมด {{ maxPossibleScore }})</p>
 
-      <!-- Stats grid -->
-      <div class="grid grid-cols-3 gap-4 mt-4">
-        <div class="bg-white/5 rounded-xl p-3">
-          <div class="text-2xl font-bold text-emerald-400">{{ correctBoth }}</div>
-          <div class="text-xs text-amber-200/40 mt-1">ถูกทั้งคู่</div>
+      <div class="grid grid-cols-3 gap-3 mt-4">
+        <div class="bg-green-50 rounded-xl p-3">
+          <div class="text-xl font-bold text-green-600">{{ correctBoth }}</div>
+          <div class="text-xs text-[#86868b] mt-1">ถูกทั้งคู่</div>
         </div>
-        <div class="bg-white/5 rounded-xl p-3">
-          <div class="text-2xl font-bold text-amber-400">{{ correctInstrument }}</div>
-          <div class="text-xs text-amber-200/40 mt-1">ทายเครื่องถูก</div>
+        <div class="bg-blue-50 rounded-xl p-3">
+          <div class="text-xl font-bold text-blue-600">{{ correctInstrument }}</div>
+          <div class="text-xs text-[#86868b] mt-1">ทายเครื่องถูก</div>
         </div>
-        <div class="bg-white/5 rounded-xl p-3">
-          <div class="text-2xl font-bold text-orange-400">{{ maxStreak }}</div>
-          <div class="text-xs text-amber-200/40 mt-1">ตอบถูกติดต่อกัน</div>
+        <div class="bg-orange-50 rounded-xl p-3">
+          <div class="text-xl font-bold text-orange-600">{{ maxStreak }}</div>
+          <div class="text-xs text-[#86868b] mt-1">ถูกติดต่อกัน</div>
         </div>
       </div>
     </div>
 
     <!-- Accuracy bar -->
-    <div class="glass-card p-4 mb-6">
+    <div class="glass-card p-4 mb-5">
       <div class="flex justify-between text-sm mb-2">
-        <span class="text-amber-200/60">ความแม่นยำ</span>
-        <span class="text-amber-300 font-bold">{{ accuracyPercent }}%</span>
+        <span class="text-[#86868b]">ความแม่นยำ</span>
+        <span class="text-[#1d1d1f] font-bold">{{ accuracyPercent }}%</span>
       </div>
-      <div class="h-3 rounded-full bg-white/5 overflow-hidden">
+      <div class="h-2 rounded-full bg-[#f5f5f7] overflow-hidden">
         <div
           class="h-full rounded-full transition-all duration-1000 ease-out"
-          :class="accuracyPercent >= 80 ? 'bg-emerald-500' : accuracyPercent >= 50 ? 'bg-amber-500' : 'bg-red-500'"
+          :class="accuracyPercent >= 80 ? 'bg-green-500' : accuracyPercent >= 50 ? 'bg-amber-500' : 'bg-red-500'"
           :style="{ width: accuracyPercent + '%' }"
         ></div>
       </div>
     </div>
 
     <!-- Answer details -->
-    <div class="glass-card p-4 mb-6">
-      <h3 class="text-amber-300 font-bold text-sm mb-3 uppercase tracking-widest">📋 รายละเอียดแต่ละข้อ</h3>
+    <div class="glass-card p-4 mb-5">
+      <h3 class="text-[#1d1d1f] font-semibold text-sm mb-3 flex items-center gap-2">
+        <Icon icon="mdi:clipboard-text-outline" class="w-4 h-4 text-[#86868b]" />
+        รายละเอียดแต่ละข้อ
+      </h3>
       <div class="space-y-2 max-h-[300px] overflow-y-auto pr-1">
         <div
           v-for="(ans, i) in answersHistory"
           :key="i"
-          class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm"
-          :class="ans.bothCorrect ? 'bg-emerald-500/10' : 'bg-red-500/10'"
+          class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm"
+          :class="ans.bothCorrect ? 'bg-green-50' : 'bg-red-50'"
         >
-          <span class="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0"
-            :class="ans.bothCorrect ? 'bg-emerald-500/20 text-emerald-400' : 'bg-red-500/20 text-red-400'"
+          <span class="w-6 h-6 rounded-full flex items-center justify-center text-xs font-semibold flex-shrink-0"
+            :class="ans.bothCorrect ? 'bg-green-100 text-green-600' : 'bg-red-100 text-red-600'"
           >
             {{ i + 1 }}
           </span>
-          <span class="flex-1 truncate" :class="ans.bothCorrect ? 'text-emerald-200' : 'text-red-200'">
+          <span class="flex-1 truncate text-[#1d1d1f]">
             {{ ans.ensembleName }}
           </span>
           <div class="flex gap-1 flex-shrink-0">
-            <span class="text-xs px-1.5 py-0.5 rounded"
-              :class="ans.instrumentCorrect ? 'bg-emerald-500/20 text-emerald-400' : 'bg-red-500/20 text-red-400'"
+            <span class="text-xs px-1.5 py-0.5 rounded font-medium"
+              :class="ans.instrumentCorrect ? 'bg-green-100 text-green-600' : 'bg-red-100 text-red-600'"
             >
-              {{ ans.instrumentCorrect ? '✓' : '✗' }} เครื่อง
+              <Icon :icon="ans.instrumentCorrect ? 'mdi:check' : 'mdi:close'" class="w-3 h-3 inline" /> เครื่อง
             </span>
-            <span class="text-xs px-1.5 py-0.5 rounded"
-              :class="ans.ensembleCorrect ? 'bg-emerald-500/20 text-emerald-400' : 'bg-red-500/20 text-red-400'"
+            <span class="text-xs px-1.5 py-0.5 rounded font-medium"
+              :class="ans.ensembleCorrect ? 'bg-green-100 text-green-600' : 'bg-red-100 text-red-600'"
             >
-              {{ ans.ensembleCorrect ? '✓' : '✗' }} วง
+              <Icon :icon="ans.ensembleCorrect ? 'mdi:check' : 'mdi:close'" class="w-3 h-3 inline" /> วง
             </span>
           </div>
         </div>
@@ -80,11 +86,13 @@
 
     <!-- Action buttons -->
     <div class="flex flex-col sm:flex-row gap-3">
-      <button @click="startGame(null)" class="btn-gold flex-1 text-center">
-        🔄 เล่นใหม่ (สุ่มทุกประเภท)
+      <button @click="startGame(null)" class="btn-gold flex-1 text-center flex items-center justify-center gap-2">
+        <Icon icon="mdi:refresh" class="w-5 h-5" />
+        เล่นใหม่
       </button>
-      <button @click="goToStart" class="btn-choice flex-1 text-center !py-4">
-        🏠 กลับหน้าหลัก
+      <button @click="goToStart" class="btn-choice flex-1 text-center !py-4 flex items-center justify-center gap-2">
+        <Icon icon="mdi:home-outline" class="w-5 h-5 text-[#86868b]" />
+        กลับหน้าหลัก
       </button>
     </div>
   </div>
@@ -92,6 +100,7 @@
 
 <script setup>
 import { computed } from 'vue'
+import { Icon } from '@iconify/vue'
 import { useGame } from '../composables/useGame'
 
 const {
@@ -111,11 +120,27 @@ const accuracyPercent = computed(() => {
   return Math.round((correctBoth.value / totalQuestionCount.value) * 100)
 })
 
-const trophy = computed(() => {
+const trophyIcon = computed(() => {
   const pct = accuracyPercent.value
-  if (pct >= 90) return '🏆'
-  if (pct >= 70) return '🥈'
-  if (pct >= 50) return '🥉'
-  return '📚'
+  if (pct >= 90) return 'mdi:trophy'
+  if (pct >= 70) return 'mdi:medal'
+  if (pct >= 50) return 'mdi:star-circle'
+  return 'mdi:book-open-variant'
+})
+
+const trophyColor = computed(() => {
+  const pct = accuracyPercent.value
+  if (pct >= 90) return 'text-amber-500'
+  if (pct >= 70) return 'text-gray-400'
+  if (pct >= 50) return 'text-orange-400'
+  return 'text-blue-400'
+})
+
+const trophyBg = computed(() => {
+  const pct = accuracyPercent.value
+  if (pct >= 90) return 'bg-amber-50'
+  if (pct >= 70) return 'bg-gray-50'
+  if (pct >= 50) return 'bg-orange-50'
+  return 'bg-blue-50'
 })
 </script>
