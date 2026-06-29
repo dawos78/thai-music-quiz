@@ -3,14 +3,14 @@
     <div
       class="glass-card p-6 text-center"
       :class="correct
-        ? 'border-green-200 bg-green-50'
-        : 'border-red-200 bg-red-50'"
+        ? 'border-green-800 bg-green-500/10'
+        : 'border-red-800 bg-red-500/10'"
     >
       <!-- Icon -->
       <div class="flex justify-center mb-3">
         <div
           class="w-14 h-14 rounded-full flex items-center justify-center"
-          :class="correct ? 'bg-green-100' : 'bg-red-100'"
+          :class="correct ? 'bg-green-500/20' : 'bg-red-500/20'"
         >
           <Icon
             :icon="correct ? 'mdi:check-circle' : 'mdi:close-circle'"
@@ -21,15 +21,15 @@
       </div>
 
       <!-- Result text -->
-      <h3 class="text-lg font-bold mb-1" :class="correct ? 'text-green-700' : 'text-red-700'">
+      <h3 class="text-lg font-bold mb-1" :class="correct ? 'text-green-400' : 'text-red-400'">
         {{ correct ? 'ถูกต้อง!' : 'ไม่ถูกต้อง' }}
       </h3>
 
       <!-- Answer info -->
-      <p class="text-sm mb-1 text-[#86868b]">
+      <p class="text-sm mb-1 text-[#98989d]">
         {{ messagePrefix }}
       </p>
-      <p class="text-base font-bold mb-2 text-[#1d1d1f]">
+      <p class="text-base font-bold mb-2 text-[#f5f5f7]">
         {{ correctAnswer }}
       </p>
 
@@ -39,13 +39,13 @@
       </p>
 
       <!-- Era info -->
-      <p v-if="era && showNext" class="text-[#86868b] text-xs mb-4 flex items-center justify-center gap-1">
+      <p v-if="era && showNext" class="text-[#98989d] text-xs mb-4 flex items-center justify-center gap-1">
         <Icon icon="mdi:book-open-page-variant-outline" class="w-3.5 h-3.5" />
         {{ era }}
       </p>
 
       <!-- Score -->
-      <div v-if="correct" class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-green-100 text-green-700 text-sm font-medium mb-4">
+      <div v-if="correct" class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-green-500/15 text-green-400 text-sm font-medium mb-4">
         <Icon icon="mdi:star" class="w-4 h-4" />
         <span>+{{ showNext ? '10' : '5' }} คะแนน</span>
       </div>

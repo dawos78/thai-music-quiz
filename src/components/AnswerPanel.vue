@@ -12,10 +12,10 @@
       }"
     >
       <div class="flex items-center gap-3">
-        <span class="w-7 h-7 rounded-lg bg-[#f5f5f7] flex items-center justify-center text-xs font-semibold text-[#86868b] group-hover:text-[#1d1d1f] transition-colors flex-shrink-0">
+        <span class="w-7 h-7 rounded-lg bg-[#2c2c2e] flex items-center justify-center text-xs font-semibold text-[#98989d] group-hover:text-[#f5f5f7] transition-colors flex-shrink-0">
           {{ ['ก', 'ข', 'ค', 'ง'][index] }}
         </span>
-        <span class="flex-1 text-[#1d1d1f]">{{ choice }}</span>
+        <span class="flex-1 text-[#f5f5f7]">{{ choice }}</span>
         <span v-if="selected === choice && !result" class="text-[#5856d6] text-sm">●</span>
       </div>
     </button>

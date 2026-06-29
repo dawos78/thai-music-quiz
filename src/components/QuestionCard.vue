@@ -2,17 +2,17 @@
   <div class="glass-card-gold p-5 md:p-6">
     <!-- Header -->
     <div class="flex items-center justify-between mb-4">
-      <h2 class="text-[#1d1d1f] font-semibold text-sm flex items-center gap-2">
-        <Icon :icon="isComplete ? 'mdi:check-circle' : 'mdi:music-note'" class="w-4 h-4" :class="isComplete ? 'text-green-500' : 'text-[#86868b]'" />
+      <h2 class="text-[#f5f5f7] font-semibold text-sm flex items-center gap-2">
+        <Icon :icon="isComplete ? 'mdi:check-circle' : 'mdi:music-note'" class="w-4 h-4" :class="isComplete ? 'text-green-500' : 'text-[#98989d]'" />
         {{ isComplete ? 'เครื่องดนตรีครบวง' : 'เครื่องดนตรีในวง' }}
       </h2>
-      <span class="text-[#86868b] text-xs">
+      <span class="text-[#98989d] text-xs">
         {{ currentCount }} / {{ totalInstruments }} ชิ้น
       </span>
     </div>
 
     <!-- Description -->
-    <p v-if="description" class="text-[#86868b] text-xs mb-4">
+    <p v-if="description" class="text-[#98989d] text-xs mb-4">
       {{ description }}
     </p>
 
@@ -25,9 +25,9 @@
         class="instrument-slot visible animate-fade-in"
         :style="{ animationDelay: (index * 0.03) + 's' }"
       >
-        <div class="w-10 h-10 rounded-lg flex-shrink-0 overflow-hidden bg-[#f5f5f7] relative">
+        <div class="w-10 h-10 rounded-lg flex-shrink-0 overflow-hidden bg-[#2c2c2e] relative">
           <div class="absolute inset-0 flex items-center justify-center">
-            <Icon :icon="getTypeIcon(inst.type)" class="w-5 h-5 text-[#86868b]" />
+            <Icon :icon="getTypeIcon(inst.type)" class="w-5 h-5 text-[#98989d]" />
           </div>
           <img
             v-if="getImage(inst.name)"
@@ -38,8 +38,8 @@
           />
         </div>
         <div class="flex-1 min-w-0">
-          <p class="text-[#1d1d1f] font-medium text-sm truncate">{{ inst.name }}</p>
-          <p class="text-[#86868b] text-xs">
+          <p class="text-[#f5f5f7] font-medium text-sm truncate">{{ inst.name }}</p>
+          <p class="text-[#98989d] text-xs">
             {{ getLabel(inst.type) }}
             {{ inst.quantity > 1 ? ' × ' + inst.quantity : '' }}
           </p>
