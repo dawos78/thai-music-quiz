@@ -3,10 +3,10 @@
     <!-- Music toggle button -->
     <button
       @click="toggle"
-      class="fixed bottom-5 right-5 z-50 w-10 h-10 rounded-full bg-[#2c2c2e] border border-[#3a3a3c] flex items-center justify-center hover:bg-[#3a3a3c] transition-colors"
+      class="fixed top-4 right-4 z-50 w-8 h-8 rounded-full bg-[#2c2c2e]/80 backdrop-blur-sm flex items-center justify-center hover:bg-[#3a3a3c] transition-colors"
       :title="isPlaying ? 'ปิดเพลง' : 'เปิดเพลง'"
     >
-      <Icon :icon="isPlaying ? 'mdi:volume-high' : 'mdi:volume-off'" class="w-5 h-5 text-[#98989d]" />
+      <Icon :icon="isPlaying ? 'mdi:volume-high' : 'mdi:volume-off'" class="w-4 h-4 text-[#98989d]" />
     </button>
 
     <StartScreen v-if="gameState === GAME_STATES.START" />
