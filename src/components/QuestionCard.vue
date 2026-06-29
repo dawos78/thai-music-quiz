@@ -33,8 +33,9 @@
             v-if="getImage(inst.name)"
             :src="getImage(inst.name)"
             :alt="inst.name"
-            class="absolute inset-0 w-full h-full object-cover z-10"
-            loading="lazy"
+            class="absolute inset-0 w-full h-full object-cover z-10 opacity-0 transition-opacity duration-300"
+            loading="eager"
+            @load="$event.target.classList.replace('opacity-0','opacity-100')"
           />
         </div>
         <div class="flex-1 min-w-0">
@@ -67,8 +68,9 @@
             v-if="getImage(hiddenInstrument.name)"
             :src="getImage(hiddenInstrument.name)"
             :alt="hiddenInstrument.name"
-            class="absolute inset-0 w-full h-full object-cover z-10"
-            loading="lazy"
+            class="absolute inset-0 w-full h-full object-cover z-10 opacity-0 transition-opacity duration-300"
+            loading="eager"
+            @load="$event.target.classList.replace('opacity-0','opacity-100')"
           />
         </div>
         <div class="flex-1">

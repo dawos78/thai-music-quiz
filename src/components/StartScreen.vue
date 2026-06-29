@@ -76,5 +76,13 @@
 <script setup>
 import { Icon } from '@iconify/vue'
 import { useGame } from '../composables/useGame'
-const { startGame } = useGame()
+import { useMusic } from '../composables/useMusic'
+
+const { startGame: _startGame } = useGame()
+const { tryAutoPlay } = useMusic()
+
+function startGame(category) {
+  tryAutoPlay()
+  _startGame(category)
+}
 </script>
