@@ -1,8 +1,8 @@
 <template>
-  <div class="h-screen overflow-hidden flex flex-col">
+  <div class="min-h-screen overflow-y-auto">
     <!-- Top bar -->
     <header class="sticky top-0 z-50 bg-[#111113]/80 backdrop-blur-lg border-b border-[#2c2c2e]">
-      <div class="w-full px-8 py-3 flex items-center justify-between">
+      <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
         <button
           @click="goToStart"
           class="flex items-center gap-3 text-[#98989d] hover:text-[#f5f5f7] transition-colors text-2xl"
@@ -36,7 +36,7 @@
     </header>
 
     <!-- Main content -->
-    <main class="w-full px-8 py-4 flex-1 overflow-y-auto">
+    <main class="max-w-5xl mx-auto w-full px-6 py-8 pb-20">
       <!-- Loading -->
       <div v-if="isLoading" class="flex items-center justify-center min-h-[60vh]">
         <div class="text-center">
