@@ -1,33 +1,33 @@
 <template>
-  <div class="glass-card-gold p-5 md:p-6">
+  <div class="glass-card-gold p-8">
     <!-- Header -->
     <div class="flex items-center justify-between mb-4">
-      <h2 class="text-[#f5f5f7] font-semibold text-sm flex items-center gap-2">
-        <Icon :icon="isComplete ? 'mdi:check-circle' : 'mdi:music-note'" class="w-4 h-4" :class="isComplete ? 'text-green-500' : 'text-[#98989d]'" />
+      <h2 class="text-[#f5f5f7] font-semibold text-2xl flex items-center gap-3">
+        <Icon :icon="isComplete ? 'mdi:check-circle' : 'mdi:music-note'" class="w-7 h-7" :class="isComplete ? 'text-green-500' : 'text-[#98989d]'" />
         {{ isComplete ? 'เครื่องดนตรีครบวง' : 'เครื่องดนตรีในวง' }}
       </h2>
-      <span class="text-[#98989d] text-xs">
+      <span class="text-[#98989d] text-xl">
         {{ currentCount }} / {{ totalInstruments }} ชิ้น
       </span>
     </div>
 
     <!-- Description -->
-    <p v-if="description" class="text-[#98989d] text-xs mb-4">
+    <p v-if="description" class="text-[#98989d] text-lg mb-6">
       {{ description }}
     </p>
 
     <!-- Instruments grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+    <div class="grid grid-cols-2 gap-4">
       <!-- Visible instruments -->
       <div
         v-for="(inst, index) in visibleInstruments"
         :key="'visible-' + index"
-        class="instrument-slot visible animate-fade-in"
+        class="instrument-slot visible animate-fade-in !px-5 !py-4"
         :style="{ animationDelay: (index * 0.03) + 's' }"
       >
-        <div class="w-10 h-10 rounded-lg flex-shrink-0 overflow-hidden bg-[#2c2c2e] relative">
+        <div class="w-16 h-16 rounded-xl flex-shrink-0 overflow-hidden bg-[#2c2c2e] relative">
           <div class="absolute inset-0 flex items-center justify-center">
-            <Icon :icon="getTypeIcon(inst.type)" class="w-5 h-5 text-[#98989d]" />
+            <Icon :icon="getTypeIcon(inst.type)" class="w-8 h-8 text-[#98989d]" />
           </div>
           <img
             v-if="getImage(inst.name)"
@@ -39,8 +39,8 @@
           />
         </div>
         <div class="flex-1 min-w-0">
-          <p class="text-[#f5f5f7] font-medium text-sm truncate">{{ inst.name }}</p>
-          <p class="text-[#98989d] text-xs">
+          <p class="text-[#f5f5f7] font-semibold text-xl truncate">{{ inst.name }}</p>
+          <p class="text-[#98989d] text-base">
             {{ getLabel(inst.type) }}
             {{ inst.quantity > 1 ? ' × ' + inst.quantity : '' }}
           </p>
@@ -48,21 +48,21 @@
       </div>
 
       <!-- Hidden slot -->
-      <div v-if="hiddenInstrument && !showHidden" class="instrument-slot hidden-instrument">
-        <div class="w-10 h-10 rounded-lg bg-amber-50 flex-shrink-0 flex items-center justify-center">
-          <Icon icon="mdi:help" class="w-5 h-5 text-amber-500" />
+      <div v-if="hiddenInstrument && !showHidden" class="instrument-slot hidden-instrument !px-5 !py-4">
+        <div class="w-16 h-16 rounded-xl bg-amber-50 flex-shrink-0 flex items-center justify-center">
+          <Icon icon="mdi:help" class="w-8 h-8 text-amber-500" />
         </div>
         <div class="flex-1">
-          <p class="text-amber-700 font-medium text-sm">เครื่องดนตรีที่หายไป</p>
-          <p class="text-amber-500 text-xs">ทายให้ถูก!</p>
+          <p class="text-amber-700 font-semibold text-xl">เครื่องดนตรีที่หายไป</p>
+          <p class="text-amber-500 text-base">ทายให้ถูก!</p>
         </div>
       </div>
 
       <!-- Revealed -->
-      <div v-if="hiddenInstrument && showHidden" class="instrument-slot revealed">
-        <div class="w-10 h-10 rounded-lg flex-shrink-0 overflow-hidden bg-green-50 relative">
+      <div v-if="hiddenInstrument && showHidden" class="instrument-slot revealed !px-5 !py-4">
+        <div class="w-16 h-16 rounded-xl flex-shrink-0 overflow-hidden bg-green-50 relative">
           <div class="absolute inset-0 flex items-center justify-center">
-            <Icon :icon="getTypeIcon(hiddenInstrument.type)" class="w-5 h-5 text-green-500" />
+            <Icon :icon="getTypeIcon(hiddenInstrument.type)" class="w-8 h-8 text-green-500" />
           </div>
           <img
             v-if="getImage(hiddenInstrument.name)"
@@ -74,13 +74,13 @@
           />
         </div>
         <div class="flex-1">
-          <p class="text-green-700 font-medium text-sm">{{ hiddenInstrument.name }}</p>
-          <p class="text-green-500 text-xs">
+          <p class="text-green-700 font-semibold text-xl">{{ hiddenInstrument.name }}</p>
+          <p class="text-green-500 text-base">
             {{ getLabel(hiddenInstrument.type) }}
             {{ hiddenInstrument.quantity > 1 ? ' × ' + hiddenInstrument.quantity : '' }}
           </p>
         </div>
-        <Icon icon="mdi:check-circle" class="w-5 h-5 text-green-500 flex-shrink-0" />
+        <Icon icon="mdi:check-circle" class="w-7 h-7 text-green-500 flex-shrink-0" />
       </div>
     </div>
   </div>

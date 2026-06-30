@@ -1,5 +1,5 @@
 <template>
-  <div class="space-y-2.5">
+  <div class="space-y-4">
     <button
       v-for="(choice, index) in choices"
       :key="index"
@@ -11,12 +11,12 @@
         'incorrect': result && selected === choice && choice !== result?.correctAnswer,
       }"
     >
-      <div class="flex items-center gap-3">
-        <span class="w-7 h-7 rounded-lg bg-[#2c2c2e] flex items-center justify-center text-xs font-semibold text-[#98989d] group-hover:text-[#f5f5f7] transition-colors flex-shrink-0">
+      <div class="flex items-center gap-4">
+        <span class="w-10 h-10 rounded-xl bg-[#2c2c2e] flex items-center justify-center text-lg font-bold text-[#98989d] group-hover:text-[#f5f5f7] transition-colors flex-shrink-0">
           {{ ['ก', 'ข', 'ค', 'ง'][index] }}
         </span>
-        <span class="flex-1 text-[#f5f5f7]">{{ choice }}</span>
-        <span v-if="selected === choice && !result" class="text-[#5856d6] text-sm">●</span>
+        <span class="flex-1 text-[#f5f5f7] text-xl">{{ choice }}</span>
+        <span v-if="selected === choice && !result" class="text-[#5856d6] text-xl">●</span>
       </div>
     </button>
 

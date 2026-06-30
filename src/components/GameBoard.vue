@@ -2,32 +2,32 @@
   <div class="min-h-screen overflow-y-auto">
     <!-- Top bar -->
     <header class="sticky top-0 z-50 bg-[#111113]/80 backdrop-blur-lg border-b border-[#2c2c2e]">
-      <div class="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
         <button
           @click="goToStart"
-          class="flex items-center gap-1.5 text-[#98989d] hover:text-[#f5f5f7] transition-colors text-sm"
+          class="flex items-center gap-3 text-[#98989d] hover:text-[#f5f5f7] transition-colors text-2xl"
         >
-          <Icon icon="mdi:arrow-left" class="w-4 h-4" />
+          <Icon icon="mdi:arrow-left" class="w-8 h-8" />
           <span>กลับ</span>
         </button>
 
-        <div class="flex items-center gap-4 text-sm">
-          <div class="flex items-center gap-1">
-            <Icon icon="mdi:star" class="w-4 h-4 text-amber-500" />
+        <div class="flex items-center gap-8 text-2xl">
+          <div class="flex items-center gap-2">
+            <Icon icon="mdi:star" class="w-8 h-8 text-amber-500" />
             <span class="font-semibold text-[#f5f5f7]">{{ totalScore }}</span>
           </div>
-          <div class="flex items-center gap-1">
-            <Icon icon="mdi:fire" class="w-4 h-4 text-orange-500" />
+          <div class="flex items-center gap-2">
+            <Icon icon="mdi:fire" class="w-8 h-8 text-orange-500" />
             <span class="font-medium text-[#f5f5f7]">{{ currentStreak }}</span>
           </div>
-          <span class="px-2.5 py-0.5 rounded-full bg-[#2c2c2e] text-[#f5f5f7] text-xs font-medium">
+          <span class="px-6 py-2 rounded-full bg-[#2c2c2e] text-[#f5f5f7] text-2xl font-semibold">
             {{ questionsAnswered + 1 }} / {{ totalQuestionCount }}
           </span>
         </div>
       </div>
 
       <!-- Progress bar -->
-      <div class="h-0.5 bg-[#2c2c2e]">
+      <div class="h-1 bg-[#2c2c2e]">
         <div
           class="h-full bg-[#f5f5f7] transition-all duration-500 ease-out"
           :style="{ width: progressPercent + '%' }"
@@ -36,12 +36,12 @@
     </header>
 
     <!-- Main content -->
-    <main class="max-w-2xl mx-auto w-full px-4 py-6 pb-20">
+    <main class="max-w-5xl mx-auto w-full px-6 py-8 pb-20">
       <!-- Loading -->
       <div v-if="isLoading" class="flex items-center justify-center min-h-[60vh]">
         <div class="text-center">
-          <Icon icon="mdi:loading" class="w-8 h-8 text-[#98989d] animate-spin mx-auto mb-3" />
-          <p class="text-[#98989d] text-sm">กำลังเตรียมชุดคำถาม...</p>
+          <Icon icon="mdi:loading" class="w-20 h-20 text-[#98989d] animate-spin mx-auto mb-6" />
+          <p class="text-[#98989d] text-3xl">กำลังเตรียมชุดคำถาม...</p>
         </div>
       </div>
 
@@ -62,7 +62,7 @@
       <!-- Game -->
       <div v-else-if="currentQuestion" class="animate-fade-in">
         <!-- Category badge -->
-        <div class="flex justify-center mb-6">
+        <div class="flex justify-center mb-8">
           <CategoryBadge
             :name="currentQuestion.categoryName"
             :color="currentQuestion.categoryColor"
@@ -80,7 +80,7 @@
           />
 
           <div class="mt-6" v-if="gameState === GAME_STATES.GUESS_INSTRUMENT">
-            <h3 class="text-center text-[#98989d] text-xs font-medium mb-4 uppercase tracking-widest">
+            <h3 class="text-center text-[#98989d] text-xl font-semibold mb-6 uppercase tracking-widest">
               เครื่องดนตรีที่หายไปคือ?
             </h3>
             <AnswerPanel
@@ -115,7 +115,7 @@
           />
 
           <div class="mt-6" v-if="gameState === GAME_STATES.GUESS_ENSEMBLE">
-            <h3 class="text-center text-[#98989d] text-xs font-medium mb-4 uppercase tracking-widest">
+            <h3 class="text-center text-[#98989d] text-xl font-semibold mb-6 uppercase tracking-widest">
               เครื่องดนตรีครบแล้ว! นี่คือวงอะไร?
             </h3>
             <AnswerPanel
