@@ -41,7 +41,7 @@ const instrumentImageMap = {
   'กลองมลายู': '/instruments/klong-malayu.png',
   'กลองแขก': '/instruments/klong-khaek.png',
   'กลองสองหน้า': '/instruments/klong-song-na.png',
-  'กลองตะโพน': '/instruments/klong-taphon.jpg',
+  'กลองตะโพน': '/instruments/klong-taphon.png',
 
   // เครื่องจังหวะ (Rhythm)
   'ฉิ่ง': '/instruments/ching.png',
