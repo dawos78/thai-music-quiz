@@ -30,7 +30,7 @@
         { "name": "ปี่ใน", "type": "เป่า", "quantity": 1 },
         { "name": "ฆ้องวงใหญ่", "type": "ตี", "quantity": 1 },
         { "name": "ตะโพน", "type": "ตี", "quantity": 1 },
-        { "name": "กลองทัด", "type": "ตี", "quantity": 1 },
+        { "name": "กลองทัด 1 ลูก", "type": "ตี", "quantity": 1 },
         { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 }
       ]
     },
@@ -45,7 +45,7 @@
         { "name": "ระนาดเอก", "type": "ตี", "quantity": 1 },
         { "name": "ฆ้องวงใหญ่", "type": "ตี", "quantity": 1 },
         { "name": "ตะโพน", "type": "ตี", "quantity": 1 },
-        { "name": "กลองทัด", "type": "ตี", "quantity": 1 },
+        { "name": "กลองทัด 1 ลูก", "type": "ตี", "quantity": 1 },
         { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 }
       ]
     },
@@ -60,7 +60,7 @@
         { "name": "ระนาดเอก", "type": "ตี", "quantity": 1 },
         { "name": "ฆ้องวงใหญ่", "type": "ตี", "quantity": 1 },
         { "name": "ตะโพน", "type": "ตี", "quantity": 1 },
-        { "name": "กลองทัด", "type": "ตี", "quantity": 2 },
+        { "name": "กลองทัด 2 ลูก", "type": "ตี", "quantity": 2 },
         { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 }
       ]
     },
@@ -78,7 +78,7 @@
         { "name": "ฆ้องวงใหญ่", "type": "ตี", "quantity": 1 },
         { "name": "ฆ้องวงเล็ก", "type": "ตี", "quantity": 1 },
         { "name": "ตะโพน", "type": "ตี", "quantity": 1 },
-        { "name": "กลองทัด", "type": "ตี", "quantity": 2 },
+        { "name": "กลองทัด 2 ลูก", "type": "ตี", "quantity": 2 },
         { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 },
         { "name": "ฉาบเล็ก", "type": "ตี", "quantity": 1 },
         { "name": "ฉาบใหญ่", "type": "ตี", "quantity": 1 },
@@ -101,7 +101,7 @@
         { "name": "ฆ้องวงใหญ่", "type": "ตี", "quantity": 1 },
         { "name": "ฆ้องวงเล็ก", "type": "ตี", "quantity": 1 },
         { "name": "ตะโพน", "type": "ตี", "quantity": 1 },
-        { "name": "กลองทัด", "type": "ตี", "quantity": 2 },
+        { "name": "กลองทัด 2 ลูก", "type": "ตี", "quantity": 2 },
         { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 },
         { "name": "ฉาบเล็ก", "type": "ตี", "quantity": 1 },
         { "name": "ฉาบใหญ่", "type": "ตี", "quantity": 1 },
@@ -153,7 +153,7 @@
       "instruments": [
         { "name": "ปี่นอก", "type": "เป่า", "quantity": 1 },
         { "name": "ฆ้องคู่", "type": "ตี", "quantity": 1 },
-        { "name": "โทน", "type": "ตี", "quantity": 1 },
+        { "name": "โทนชาตรี", "type": "ตี", "quantity": 1 },
         { "name": "กลองชาตรี", "type": "ตี", "quantity": 2 },
         { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 },
         { "name": "กรับ", "type": "ตี", "quantity": 1 }

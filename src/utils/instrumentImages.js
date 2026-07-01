@@ -4,7 +4,7 @@
 const instrumentImageMap = {
   // ปี่ (Oboes)
   'ปี่ใน': '/instruments/pi-nai.png',
-  'ปี่นอก': '/instruments/pi-nai.png',
+  'ปี่นอก': '/instruments/pi-nok.png',
   'ปี่ชวา': '/instruments/pi-chawa.png',
   'ปี่มอญ': '/instruments/pi-mon.png',
 
@@ -16,43 +16,52 @@ const instrumentImageMap = {
   'ระนาดทุ้ม (มโหรี)': '/instruments/ranad-thum.png',
   'ระนาดเอกเหล็ก': '/instruments/ranad-ek-lek.png',
   'ระนาดเอกเหล็ก (มโหรี)': '/instruments/ranad-ek-lek.png',
-  'ระนาดทุ้มเหล็ก': '/instruments/ranad-ek-lek.png',
-  'ระนาดทุ้มเหล็ก (มโหรี)': '/instruments/ranad-ek-lek.png',
+  'ระนาดทุ้มเหล็ก': '/instruments/ranad-thum-lek.png',
+  'ระนาดทุ้มเหล็ก (มโหรี)': '/instruments/ranad-thum-lek.png',
 
   // ฆ้อง (Gongs)
   'ฆ้องวงใหญ่': '/instruments/khong-wong-yai.png',
   'ฆ้องวงใหญ่ (มโหรี)': '/instruments/khong-wong-yai.png',
   'ฆ้องวงเล็ก': '/instruments/khong-wong-lek.png',
   'ฆ้องวงเล็ก (มโหรี)': '/instruments/khong-wong-lek.png',
-  'ฆ้องมอญวงใหญ่': '/instruments/khong-mon.png',
-  'ฆ้องคู่': '/instruments/khong-wong-yai.png',
-  'ฆ้องหุ่ย': '/instruments/khong-wong-yai.png',
+  'ฆ้องมอญวงใหญ่': '/instruments/khong-mon-yai.png',
+  'ฆ้องมอญวงเล็ก': '/instruments/khong-mon-lek.png',
+  'ฆ้องคู่': '/instruments/khong-khu.png',
+  'ฆ้องหุ่ย': '/instruments/khong-rao.png',
+  'ฆ้องราว 3 ใบ': '/instruments/khong-rao.png',
 
   // กลอง / ตะโพน (Drums)
   'ตะโพน': '/instruments/taphon.png',
-  'ตะโพนมอญ': '/instruments/taphon.png',
+  'ตะโพนมอญ': '/instruments/taphon-mon.png',
+  'ตะโพนไทย': '/instruments/taphon.png',
   'กลองทัด': '/instruments/klong-thad.png',
-  'กลองชาตรี': '/instruments/klong-thad.png',
-  'กลองมลายู': '/instruments/klong-khaek.png',
+  'กลองทัด 1 ลูก': '/instruments/klong-thad-1.png',
+  'กลองทัด 2 ลูก': '/instruments/klong-thad-2.png',
+  'กลองชาตรี': '/instruments/klong-chatri.png',
+  'กลองมลายู': '/instruments/klong-malayu.png',
   'กลองแขก': '/instruments/klong-khaek.png',
-  'กลองสองหน้า': '/instruments/klong-thad.png',
+  'กลองสองหน้า': '/instruments/klong-song-na.png',
   'กลองตะโพน': '/instruments/taphon.png',
 
   // เครื่องจังหวะ (Rhythm)
   'ฉิ่ง': '/instruments/ching.png',
-  'ฉาบ': '/instruments/ching.png',
-  'ฉาบเล็ก': '/instruments/ching.png',
-  'ฉาบใหญ่': '/instruments/ching.png',
+  'ฉาบ': '/instruments/chap-yai.png',
+  'ฉาบเล็ก': '/instruments/chap-lek.png',
+  'ฉาบใหญ่': '/instruments/chap-yai.png',
   'โหม่ง': '/instruments/mong.png',
-  'กรับ': '/instruments/ching.png',
-  'กรับพวง': '/instruments/ching.png',
+  'โหม่งราว': '/instruments/mong-rao.png',
+  'กรับ': '/instruments/krap-sepha.png',
+  'กรับเสภา': '/instruments/krap-sepha.png',
+  'กรับพวง': '/instruments/krap-phuang.png',
 
   // โทน-รำมะนา (Goblet + Frame drums)
   'โทน-รำมะนา': '/instruments/thon-rammana.png',
   'โทน': '/instruments/thon-rammana.png',
-  'โทน (ทับ)': '/instruments/thon-rammana.png',
+  'โทน (ทับ)': '/instruments/thap.png',
+  'ทับ': '/instruments/thap.png',
+  'โทนชาตรี': '/instruments/thon-chatri.png',
   'รำมะนา': '/instruments/thon-rammana.png',
-  'เปิงมางคอก': '/instruments/klong-khaek.png',
+  'เปิงมางคอก': '/instruments/poeng-mang-khok.png',
 
   // เครื่องสี (Bowed strings)
   'ซอด้วง': '/instruments/saw-duang.png',
@@ -65,8 +74,8 @@ const instrumentImageMap = {
   'กระจับปี่': '/instruments/krajappi.png',
 
   // ขลุ่ย (Flutes)
-  'ขลุ่ยเพียงออ': '/instruments/khlui.png',
-  'ขลุ่ยหลิบ': '/instruments/khlui.png',
+  'ขลุ่ยเพียงออ': '/instruments/khlui-phiang-aw.png',
+  'ขลุ่ยหลิบ': '/instruments/khlui-lip.png',
   'ขลุ่ยอู้': '/instruments/khlui.png',
 
   // ขิม (Hammered dulcimer)

@@ -14,6 +14,8 @@
   </div>
 </template>
 
+
+
 <script setup>
 import { Icon } from '@iconify/vue'
 import { useGame } from './composables/useGame'
