@@ -122,7 +122,8 @@
         { "name": "ฆ้องวงเล็ก", "type": "ตี", "quantity": 1 },
         { "name": "กลองมลายู", "type": "ตี", "quantity": 1 },
         { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 },
-        { "name": "ฉาบ", "type": "ตี", "quantity": 1 }
+        { "name": "ฉาบ", "type": "ตี", "quantity": 1 },
+        { "name": "โหม่ง", "type": "ตี", "quantity": 1 }
       ]
     },
     {
@@ -134,6 +135,7 @@
       "instruments": [
         { "name": "ปี่มอญ", "type": "เป่า", "quantity": 1 },
         { "name": "ฆ้องมอญวงใหญ่", "type": "ตี", "quantity": 1 },
+        { "name": "ฆ้องมอญวงเล็ก", "type": "ตี", "quantity": 1 },
         { "name": "ระนาดเอก", "type": "ตี", "quantity": 1 },
         { "name": "ระนาดทุ้ม", "type": "ตี", "quantity": 1 },
         { "name": "ตะโพนมอญ", "type": "ตี", "quantity": 1 },
@@ -175,6 +177,7 @@
         { "name": "ฆ้องหุ่ย", "type": "ตี", "quantity": 7 },
         { "name": "ตะโพน", "type": "ตี", "quantity": 1 },
         { "name": "กลองตะโพน", "type": "ตี", "quantity": 1 },
+        { "name": "กลองแขก", "type": "ตี", "quantity": 1 },
         { "name": "ซออู้", "type": "สี", "quantity": 1 },
         { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 }
       ]
@@ -192,7 +195,8 @@
         { "name": "ฆ้องวงใหญ่", "type": "ตี", "quantity": 1 },
         { "name": "ฆ้องวงเล็ก", "type": "ตี", "quantity": 1 },
         { "name": "กลองสองหน้า", "type": "ตี", "quantity": 1 },
-        { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 }
+        { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 },
+        { "name": "โหม่ง", "type": "ตี", "quantity": 1 }
       ]
     },
     {
@@ -225,7 +229,7 @@
         { "name": "โทน-รำมะนา", "type": "ตี", "quantity": 1 },
         { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 },
         { "name": "ฉาบเล็ก", "type": "ตี", "quantity": 1 },
-        { "name": "โหม่ง", "type": "ตี", "quantity": 1 }
+        { "name": "กรับพวง", "type": "ตี", "quantity": 1 }
       ]
     },
     {
@@ -241,7 +245,8 @@
         { "name": "จะเข้", "type": "ดีด", "quantity": 1 },
         { "name": "ขลุ่ยหลิบ", "type": "เป่า", "quantity": 1 },
         { "name": "กลองแขก", "type": "ตี", "quantity": 1 },
-        { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 }
+        { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 },
+        { "name": "กรับเสภา", "type": "ตี", "quantity": 1 }
       ]
     },
     {
@@ -303,7 +308,8 @@
         { "name": "ระนาดเอก (มโหรี)", "type": "ตี", "quantity": 1 },
         { "name": "ฆ้องวงใหญ่ (มโหรี)", "type": "ตี", "quantity": 1 },
         { "name": "โทน-รำมะนา", "type": "ตี", "quantity": 1 },
-        { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 }
+        { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 },
+        { "name": "ฉาบเล็ก", "type": "ตี", "quantity": 1 }
       ]
     },
     {
@@ -314,7 +320,6 @@
       "description": "เพิ่มเครื่องดนตรีให้มากขึ้นจากเครื่องเดี่ยว มีทั้งเครื่องสายและเครื่องตี",
       "instruments": [
         { "name": "ซอสามสาย", "type": "สี", "quantity": 1 },
-        { "name": "ซอสามสายหลิบ", "type": "สี", "quantity": 1 },
         { "name": "ซอด้วง", "type": "สี", "quantity": 2 },
         { "name": "ซออู้", "type": "สี", "quantity": 2 },
         { "name": "จะเข้", "type": "ดีด", "quantity": 2 },
@@ -325,7 +330,8 @@
         { "name": "ฆ้องวงใหญ่ (มโหรี)", "type": "ตี", "quantity": 1 },
         { "name": "ฆ้องวงเล็ก (มโหรี)", "type": "ตี", "quantity": 1 },
         { "name": "โทน-รำมะนา", "type": "ตี", "quantity": 1 },
-        { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 }
+        { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 },
+        { "name": "ฉาบเล็ก", "type": "ตี", "quantity": 1 }
       ]
     },
     {
@@ -336,7 +342,6 @@
       "description": "วงมโหรีที่มีเครื่องดนตรีครบถ้วนที่สุด รวมระนาดเหล็กจากวงปี่พาทย์เครื่องใหญ่",
       "instruments": [
         { "name": "ซอสามสาย", "type": "สี", "quantity": 1 },
-        { "name": "ซอสามสายหลิบ", "type": "สี", "quantity": 1 },
         { "name": "ซอด้วง", "type": "สี", "quantity": 2 },
         { "name": "ซออู้", "type": "สี", "quantity": 2 },
         { "name": "จะเข้", "type": "ดีด", "quantity": 2 },
@@ -349,7 +354,8 @@
         { "name": "ฆ้องวงใหญ่ (มโหรี)", "type": "ตี", "quantity": 1 },
         { "name": "ฆ้องวงเล็ก (มโหรี)", "type": "ตี", "quantity": 1 },
         { "name": "โทน-รำมะนา", "type": "ตี", "quantity": 1 },
-        { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 }
+        { "name": "ฉิ่ง", "type": "ตี", "quantity": 1 },
+        { "name": "ฉาบเล็ก", "type": "ตี", "quantity": 1 }
       ]
     }
   ]
